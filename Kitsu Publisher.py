@@ -291,7 +291,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def fetch_result(self, nr_shots):
         self.pb_fetch.setText("Fetch")
         if not isinstance(nr_shots, (int, float, complex)):
-            print(1)
             self.l_info.setText(
                 "Some error happend. Could not fetch information")
             printMessage(nr_shots)  # An error happened. Print it
