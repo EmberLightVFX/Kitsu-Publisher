@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ui.ui'
+# Form generated from reading UI file 'ui.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.1
+# Created by: Qt User Interface Compiler version 5.15.1
 ##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
+# WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
 ***REMOVED***
@@ -24,7 +24,8 @@ class Ui_MainWindow(object):
         sizePolicy = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -33,7 +34,8 @@ class Ui_MainWindow(object):
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.gb_p1.sizePolicy().hasHeightForWidth())
+        sizePolicy1.setHeightForWidth(
+            self.gb_p1.sizePolicy().hasHeightForWidth())
         self.gb_p1.setSizePolicy(sizePolicy1)
         self.gb_p1.setFlat(False)
         self.gb_p1.setCheckable(False)
@@ -50,7 +52,6 @@ class Ui_MainWindow(object):
         self.le_kitsuURL.setObjectName(u"le_kitsuURL")
 
         self.horizontalLayout_2.addWidget(self.le_kitsuURL)
-
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
@@ -77,7 +78,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.le_password)
 
-
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
 
         self.pb_login = QPushButton(self.gb_p1)
@@ -93,7 +93,8 @@ class Ui_MainWindow(object):
         sizePolicy2 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
         sizePolicy2.setHorizontalStretch(0)
         sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.l_project.sizePolicy().hasHeightForWidth())
+        sizePolicy2.setHeightForWidth(
+            self.l_project.sizePolicy().hasHeightForWidth())
         self.l_project.setSizePolicy(sizePolicy2)
 
         self.project_layout.addWidget(self.l_project)
@@ -104,15 +105,14 @@ class Ui_MainWindow(object):
 
         self.project_layout.addWidget(self.cb_project)
 
-
         self.verticalLayout_2.addLayout(self.project_layout)
-
 
         self.verticalLayout.addWidget(self.gb_p1)
 
         self.gb_p2 = QGroupBox(self.centralwidget)
         self.gb_p2.setObjectName(u"gb_p2")
-        sizePolicy1.setHeightForWidth(self.gb_p2.sizePolicy().hasHeightForWidth())
+        sizePolicy1.setHeightForWidth(
+            self.gb_p2.sizePolicy().hasHeightForWidth())
         self.gb_p2.setSizePolicy(sizePolicy1)
         self.verticalLayout_3 = QVBoxLayout(self.gb_p2)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -146,14 +146,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.pb_pick)
 
-
         self.verticalLayout_3.addLayout(self.horizontalLayout_5)
 
         self.pb_fetch = QPushButton(self.gb_p2)
         self.pb_fetch.setObjectName(u"pb_fetch")
 
         self.verticalLayout_3.addWidget(self.pb_fetch)
-
 
         self.verticalLayout.addWidget(self.gb_p2)
 
@@ -177,13 +175,14 @@ class Ui_MainWindow(object):
         __qtablewidgetitem5 = QTableWidgetItem()
         self.tv_information.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        __qtablewidgetitem6.setTextAlignment(Qt.AlignJustify|Qt.AlignVCenter);
+        __qtablewidgetitem6.setTextAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.tv_information.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         self.tv_information.setObjectName(u"tv_information")
         self.tv_information.setAlternatingRowColors(True)
         self.tv_information.setSelectionMode(QAbstractItemView.SingleSelection)
         self.tv_information.setSelectionBehavior(QAbstractItemView.SelectItems)
-        self.tv_information.setHorizontalScrollMode(QAbstractItemView.ScrollPerPixel)
+        self.tv_information.setHorizontalScrollMode(
+            QAbstractItemView.ScrollPerPixel)
         self.tv_information.setWordWrap(False)
 
         self.verticalLayout_5.addWidget(self.tv_information)
@@ -193,7 +192,8 @@ class Ui_MainWindow(object):
         self.l_task = QLabel(self.gb_p3)
         self.l_task.setObjectName(u"l_task")
         self.l_task.setEnabled(False)
-        sizePolicy2.setHeightForWidth(self.l_task.sizePolicy().hasHeightForWidth())
+        sizePolicy2.setHeightForWidth(
+            self.l_task.sizePolicy().hasHeightForWidth())
         self.l_task.setSizePolicy(sizePolicy2)
 
         self.tasklayout.setWidget(0, QFormLayout.LabelRole, self.l_task)
@@ -216,9 +216,7 @@ class Ui_MainWindow(object):
 
         self.tasklayout.setWidget(0, QFormLayout.FieldRole, self.cb_task)
 
-
         self.verticalLayout_5.addLayout(self.tasklayout)
-
 
         self.verticalLayout.addWidget(self.gb_p3)
 
@@ -232,7 +230,6 @@ class Ui_MainWindow(object):
         self.cb_reupload.setObjectName(u"cb_reupload")
 
         self.horizontalLayout.addWidget(self.cb_reupload)
-
 
         self.verticalLayout_4.addLayout(self.horizontalLayout)
 
@@ -252,7 +249,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addWidget(self.l_info)
 
-
         self.verticalLayout.addWidget(self.gb_p4)
 
         self.horizontalLayout_7 = QHBoxLayout()
@@ -262,7 +258,8 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_7.addWidget(self.l_createdby)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer = QSpacerItem(
+            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_7.addItem(self.horizontalSpacer)
 
@@ -278,7 +275,6 @@ class Ui_MainWindow(object):
         self.l_appversion.setObjectName(u"l_appversion")
 
         self.horizontalLayout_9.addWidget(self.l_appversion)
-
 
         self.horizontalLayout_7.addLayout(self.horizontalLayout_9)
 
@@ -297,7 +293,8 @@ class Ui_MainWindow(object):
         sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.l_gazuinfo.sizePolicy().hasHeightForWidth())
+        sizePolicy3.setHeightForWidth(
+            self.l_gazuinfo.sizePolicy().hasHeightForWidth())
         self.l_gazuinfo.setSizePolicy(sizePolicy3)
         self.l_gazuinfo.setLayoutDirection(Qt.LeftToRight)
 
@@ -308,9 +305,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8.addWidget(self.l_gazuversion)
 
-
         self.horizontalLayout_7.addLayout(self.horizontalLayout_8)
-
 
         self.verticalLayout.addLayout(self.horizontalLayout_7)
 
@@ -322,44 +317,75 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Kitsu Publisher", None))
-        self.gb_p1.setTitle(QCoreApplication.translate("MainWindow", u"1. Login", None))
-        self.l_kitsuURL.setText(QCoreApplication.translate("MainWindow", u"Kitsu URL:", None))
-        self.l_username.setText(QCoreApplication.translate("MainWindow", u"Username:", None))
-        self.l_password.setText(QCoreApplication.translate("MainWindow", u"Password:", None))
-        self.pb_login.setText(QCoreApplication.translate("MainWindow", u"Log in", None))
-        self.l_project.setText(QCoreApplication.translate("MainWindow", u"Project:", None))
-        self.gb_p2.setTitle(QCoreApplication.translate("MainWindow", u"2. Where to fetch information from", None))
-        self.rb_doXML.setText(QCoreApplication.translate("MainWindow", u"Resolve XML", None))
-        self.rb_doFolder.setText(QCoreApplication.translate("MainWindow", u"Folder", None))
-        self.cb_subfolders.setText(QCoreApplication.translate("MainWindow", u"Subfolders", None))
-        self.pb_pick.setText(QCoreApplication.translate("MainWindow", u"Pick", None))
-        self.pb_fetch.setText(QCoreApplication.translate("MainWindow", u"Fetch!", None))
-        self.gb_p3.setTitle(QCoreApplication.translate("MainWindow", u"3. Analyze your information", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate(
+            "MainWindow", u"Kitsu Publisher", None))
+        self.gb_p1.setTitle(QCoreApplication.translate(
+            "MainWindow", u"1. Login", None))
+        self.l_kitsuURL.setText(QCoreApplication.translate(
+            "MainWindow", u"Kitsu URL:", None))
+        self.l_username.setText(QCoreApplication.translate(
+            "MainWindow", u"Username:", None))
+        self.l_password.setText(QCoreApplication.translate(
+            "MainWindow", u"Password:", None))
+        self.pb_login.setText(QCoreApplication.translate(
+            "MainWindow", u"Log in", None))
+        self.l_project.setText(QCoreApplication.translate(
+            "MainWindow", u"Project:", None))
+        self.gb_p2.setTitle(QCoreApplication.translate(
+            "MainWindow", u"2. Where to fetch information from", None))
+        self.rb_doXML.setText(QCoreApplication.translate(
+            "MainWindow", u"Resolve XML", None))
+        self.rb_doFolder.setText(
+            QCoreApplication.translate("MainWindow", u"Folder", None))
+        self.cb_subfolders.setText(QCoreApplication.translate(
+            "MainWindow", u"Subfolders", None))
+        self.pb_pick.setText(QCoreApplication.translate(
+            "MainWindow", u"Pick", None))
+        self.pb_fetch.setText(QCoreApplication.translate(
+            "MainWindow", u"Fetch!", None))
+        self.gb_p3.setTitle(QCoreApplication.translate(
+            "MainWindow", u"3. Analyze your information", None))
         ___qtablewidgetitem = self.tv_information.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Status", None));
+        ___qtablewidgetitem.setText(
+            QCoreApplication.translate("MainWindow", u"Status", None))
         ___qtablewidgetitem1 = self.tv_information.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Shot Exists", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate(
+            "MainWindow", u"Shot Exists", None))
         ___qtablewidgetitem2 = self.tv_information.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Sequence", None));
+        ___qtablewidgetitem2.setText(
+            QCoreApplication.translate("MainWindow", u"Sequence", None))
         ___qtablewidgetitem3 = self.tv_information.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Shot", None));
+        ___qtablewidgetitem3.setText(
+            QCoreApplication.translate("MainWindow", u"Shot", None))
         ___qtablewidgetitem4 = self.tv_information.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Framerange", None));
+        ___qtablewidgetitem4.setText(
+            QCoreApplication.translate("MainWindow", u"Framerange", None))
         ___qtablewidgetitem5 = self.tv_information.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Preview Path", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate(
+            "MainWindow", u"Preview Path", None))
         ___qtablewidgetitem6 = self.tv_information.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Filesize", None));
-        self.l_task.setText(QCoreApplication.translate("MainWindow", u"Post previews under:", None))
-        self.l_status.setText(QCoreApplication.translate("MainWindow", u"With status:", None))
-        self.gb_p4.setTitle(QCoreApplication.translate("MainWindow", u"4. Publish", None))
-        self.cb_reupload.setText(QCoreApplication.translate("MainWindow", u"Upload previews to shots that already exists", None))
-        self.pb_publish.setText(QCoreApplication.translate("MainWindow", u"Publish", None))
-        self.l_info.setText(QCoreApplication.translate("MainWindow", u"Information bar", None))
-        self.l_createdby.setText(QCoreApplication.translate("MainWindow", u"Created by Jacob Danell, Ember Light", None))
-        self.l_appinfo.setText(QCoreApplication.translate("MainWindow", u"Kitsu Publisher v", None))
-        self.l_appversion.setText(QCoreApplication.translate("MainWindow", u"1234", None))
-        self.l_gazuinfo.setText(QCoreApplication.translate("MainWindow", u"Gazu v", None))
-        self.l_gazuversion.setText(QCoreApplication.translate("MainWindow", u"1234", None))
+        ___qtablewidgetitem6.setText(
+            QCoreApplication.translate("MainWindow", u"Filesize", None))
+        self.l_task.setText(QCoreApplication.translate(
+            "MainWindow", u"Post previews under:", None))
+        self.l_status.setText(QCoreApplication.translate(
+            "MainWindow", u"With status:", None))
+        self.gb_p4.setTitle(QCoreApplication.translate(
+            "MainWindow", u"4. Publish", None))
+        self.cb_reupload.setText(QCoreApplication.translate(
+            "MainWindow", u"Upload previews to shots that already exists", None))
+        self.pb_publish.setText(QCoreApplication.translate(
+            "MainWindow", u"Publish", None))
+        self.l_info.setText(QCoreApplication.translate(
+            "MainWindow", u"Information bar", None))
+        self.l_createdby.setText(QCoreApplication.translate(
+            "MainWindow", u"Created by Jacob Danell, Ember Light", None))
+        self.l_appinfo.setText(QCoreApplication.translate(
+            "MainWindow", u"Kitsu Publisher v", None))
+        self.l_appversion.setText(
+            QCoreApplication.translate("MainWindow", u"1234", None))
+        self.l_gazuinfo.setText(QCoreApplication.translate(
+            "MainWindow", u"Gazu v", None))
+        self.l_gazuversion.setText(
+            QCoreApplication.translate("MainWindow", u"1234", None))
     # retranslateUi
-
