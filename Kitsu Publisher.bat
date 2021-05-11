@@ -1,3 +1,3 @@
 @echo off 
-start "" pythonw "Kitsu Publisher.py"
+start "" python "Kitsu Publisher.py"
 exit
