@@ -416,7 +416,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if calltype == 0:  # Write upload filesize
             self.l_info.setText(
                 "Uploading... This can take a while. Current file: "
-                + str(pretty_size(data))
+                + str(data.text())
             )
         elif calltype == 1:  # Process done. Update progressbar
             self.progressBar.setValue(
@@ -469,23 +469,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                shot.text(),
                                                nb_frames=framerange.text())
                 already_uploaded = False
-
             # Add preview
             if already_uploaded is False or self.cb_reupload.isChecked() is True:
-
                 task_dict = gazu.task.get_task_by_name(
                     shot_dict, self.cb_task.currentData())
                 if task_dict is None:
                     task_dict = gazu.task.new_task(
                         shot_dict, self.cb_task.currentData()
                     )
-
                 previews = gazu.files.get_all_preview_files_for_task(
                     task_dict)
-
                 person = gazu.person.get_person_by_email(
                     self.le_username.text())
-
                 comment_dict = gazu.task.add_comment(
                     task_dict,
                     self.cb_status.currentData(),
