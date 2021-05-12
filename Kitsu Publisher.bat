@@ -1,3 +1,4 @@
-@echo off 
-start "" python "Kitsu Publisher.py"
+@echo OFF
+call env\Scripts\activate.bat
+python "Kitsu Publisher.py"
 exit
