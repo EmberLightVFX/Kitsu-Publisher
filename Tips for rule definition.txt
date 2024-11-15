@@ -1,0 +1,134 @@
+* 中文说明请向下翻
+
+In general, the input format for the rules is:
+<Basic Rule>,<Advanced Rule>
+These are connected by a ","
+You can input only the basic rule, in which case the format is:
+<Basic Rule>
+The advanced rule must be associated with the basic rule and cannot be input separately.
+Additionally, multiple sets of <Basic Rule>,<Advanced Rule> can be connected using "&",
+with the format:
+<Basic Rule>,<Advanced Rule>&<Basic Rule>,<Advanced Rule>
+
+Let's first look at the basic rule.
+By default, the basic rule splits the filename of the preview file into multiple fields using the character entered in the Delimiter box.
+When the useFolder checkbox is checked, the basic rule changes to split the full path of the preview file and its filename into multiple fields using the "\" or "/" in the preview path along with the character in the Delimiter box.
+Then, you can enter the split field index in the corresponding field rule boxes.
+The input format is:
+<Number> or <Number>+<Number>
+You can use "+" to connect multiple <Number> as needed.
+
+Example 1:
+Data on Kitsu is Ep101 / Sq001 / demo_Ep101_Sq001_Shot002
+The preview path is W:\publish\mov\101\demo_Ep101_Sq001_Shot002_ani.mov
+
+uncheck useFolder		Delimiter: _	Ep: 2	Sq: 3	Shot: 1+2+3+4	Task: 5
+
+Example 2:
+Data on Kitsu is Ep101 / Sq001 / Shot002
+The preview path is W:\publish\mov\Ep101\Sq001\Shot002-ani.mov
+
+check useFolder	Delimiter: -	Ep: 4	Sq: 5	Shot: 6	Task: 7
+
+Next, let's look at the advanced rule.
+The advanced rule is for further field processing based on the results of the basic rule. The processing methods include:
+<string>+	Add <string> before the current calculated field
++<string>	Add <string> after the current calculated field
+<string>-	Remove <string> before the current calculated field
+-<string>	Remove <string> after the current calculated field
+<string1>:<string2>		Replace <string1> with <string2> in the current calculated field
+You can connect multiple <Advanced Rule> with a "," as needed.
+
+Example 1:
+Data on Kitsu is Ep101 / Sq001 / demo_101_001_002
+The preview path is W:\publish\mov\101\demo_101_001_002_ani.mov
+
+uncheck useFolder	Delimiter: _	Ep: 2,Ep+	Sq: 3,Sq+	Shot: 1+2+3+4	Task: 5
+
+Example 2:
+Data on Kitsu is Ep101 / Sq001 / Shot0020	task name is "FX"
+The preview path is W:\publish\mov\0101\0010\002_efx.mov
+
+check useFolder	Delimiter: -	Ep: 4,0-,Ep+		Sq: 5,Sq+,-0		Shot: 6,Shot+,+0		Task: 7,efx:fx
+
+Finally, let's look at connecting multiple sets of <Basic Rule>,<Advanced Rule> using "&":
+
+Example 1:
+Data on Kitsu is Ep101 / Sq0010 / demo_Ep101_Sq0010_Shot0020
+The preview path is W:\publish\mov\101\demoreel_101_001_002_ani.mov
+
+uncheck useFolder	Delimiter: _	Ep: 2,Ep+	Sq: 3,Sq+,+0		Shot: 1,reel:&2,Ep+&3,Sq+,+0&4,Shot+,+0		Task: 5
+
+When the rules become complex, we can improve readability by adding spaces around the connectors. This does not affect the rule calculation result, for example:
+Shot: 1,reel:  &  2,Ep+  &  3,Sq+,+0  &  4,Shot+,+0
+
+That's all, enjoy!
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+总体上，规则的输入格式为：
+<基础规则>,<高级规则>
+它们之间是通过 "," 来连接的。
+可以单独输入基础规则，输入格式为：
+<基础规则>
+高级规则需要依附于基础规则，所以不能单独输入高级规则，
+此外，还可以通过 "&" 连接多组 <基础规则>,<高级规则>
+输入格式为：
+<基础规则>,<高级规则>&<基础规则>,<高级规则>
+
+我们先来看基础规则，
+默认情况下，基础规则是使用 Delimiter 框中输入的字符将预览文件的文件名分割成多个字段，
+当勾选了 useFolder 复选框后，基础规则会变成使用预览文件路径中的 "\" 或 "/" 和 Delimiter 框中输入的字符将
+预览文件所在的完整路径和预览文件的文件名分割成多个字段。
+接着，我们便可以在相应的字段规则框里输入分割好的字段序号了。
+输入的格式为：
+<数字> 或 <数字>+<数字>
+你可以根据需要使用 "+" 连接多个 <数字>
+这便是基础规则。
+
+例1：
+Kitsu上的数据是 Ep101 / Sq001 / demo_Ep101_Sq001_Shot002
+预览文件的完整路径为 W:\publish\mov\101\demo_Ep101_Sq001_Shot002_ani.mov
+
+不勾选useFolder	Delimiter: _	Ep: 2	Sq: 3	Shot: 1+2+3+4	Task: 5
+
+例2：
+Kitsu上的数据是 Ep101 / Sq001 / Shot002
+预览文件的完整路径为 W:\publish\mov\Ep101\Sq001\Shot002-ani.mov
+
+勾选useFolder	Delimiter: -	Ep: 4	Sq: 5	Shot: 6	Task: 7
+
+下面，我们来看高级规则，
+高级规则是在应用基础规则计算得到的结果上做进一步的字段处理，处理方式包括：
+<字符>+    在当前计算结果字段前添加 <字符>
++<字符>    在当前计算结果字段后添加 <字符>
+<字符>-    在当前计算结果字段前去掉 <字符>
+-<字符>    在当前计算结果字段后去掉 <字符>
+<字符1>:<字符2>    使用 <字符2> 替换当前计算结果字段中的 <字符1>
+你可以根据需要使用 "," 连接多个 <高级规则>
+这便是高级规则。
+
+例1：
+Kitsu上的数据是 Ep101 / Sq001 / demo_101_001_002
+预览文件的完整路径为 W:\publish\mov\101\demo_101_001_002_ani.mov
+
+不勾选useFolder	Delimiter: _	Ep: 2,Ep+	Sq: 3,Sq+	Shot: 1+2+3+4	Task: 5
+
+例2：
+Kitsu上的数据是 Ep101 / Sq001 / Shot0020 环节名称 FX
+预览文件的完整路径为 W:\publish\mov\0101\0010\002_efx.mov
+
+勾选useFolder	Delimiter: -	Ep: 4,0-,Ep+		Sq: 5,Sq+,-0		Shot: 6,Shot+,+0		Task: 7,efx:fx
+
+最后，我们来看通过 "&" 连接多组 <基础规则>,<高级规则>
+
+例1：
+Kitsu上的数据是 Ep101 / Sq0010 / demo_Ep101_Sq0010_Shot0020
+预览文件的完整路径为 W:\publish\mov\101\demoreel_101_001_002_ani.mov
+
+不勾选useFolder	Delimiter: _	Ep: 2,Ep+	Sq: 3,Sq+,+0		Shot: 1,reel:&2,Ep+&3,Sq+,+0&4,Shot+,+0		Task: 5
+
+当规则变得复杂时，我们可以通过在连接符两侧添加空格，来提高易读性，这不会影响规则计算的结果，例如：
+Shot: 1,reel:  &  2,Ep+  &  3,Sq+,+0  &  4,Shot+,+0
+
+以上便是关于如何定义规则的简要说明了，希望能帮助到你！
