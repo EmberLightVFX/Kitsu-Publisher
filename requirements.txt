@@ -22,3 +22,4 @@ typing-extensions==3.10.0.0
 urllib3==1.25.11
 websocket-client==0.59.0
 zipp==3.4.1
+cryptography==43.0.3

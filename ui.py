@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(500, 600)
+        MainWindow.resize(720, 960)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setEnabled(True)
@@ -104,6 +104,12 @@ class Ui_MainWindow(object):
         self.cb_project.setEnabled(False)
 
         self.project_layout.addWidget(self.cb_project)
+        
+        self.pb_refresh = QPushButton(self.gb_p1)
+        self.pb_refresh.setObjectName(u"pb_refresh")
+        self.pb_refresh.setFixedWidth(75)
+
+        self.project_layout.addWidget(self.pb_refresh)
 
         self.verticalLayout_2.addLayout(self.project_layout)
 
@@ -148,6 +154,72 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addLayout(self.horizontalLayout_5)
 
+        self.horizontalLayout_6 = QHBoxLayout()
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+
+        self.l_define_rule = QLabel(self.gb_p2)
+        self.l_define_rule.setObjectName(u"l_define_rule")
+
+        self.horizontalLayout_6.addWidget(self.l_define_rule)
+
+        self.cb_use_folder = QCheckBox(self.gb_p2)
+        self.cb_use_folder.setObjectName(u"cb_use_folder")
+
+        self.horizontalLayout_6.addWidget(self.cb_use_folder)
+
+        self.l_delimiter = QLabel(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.l_delimiter)
+
+        self.le_delimiter = QLineEdit(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.le_delimiter)
+
+        self.l_ep = QLabel(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.l_ep)
+
+        self.le_ep = QLineEdit(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.le_ep)
+
+        self.l_sq = QLabel(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.l_sq)
+
+        self.le_sq = QLineEdit(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.le_sq)
+
+        self.l_sh = QLabel(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.l_sh)
+
+        self.le_sh = QLineEdit(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.le_sh)
+
+        self.l_ta = QLabel(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.l_ta)
+
+        self.le_ta = QLineEdit(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.le_ta)
+
+        self.verticalLayout_3.addLayout(self.horizontalLayout_6)
+
+        self.l_spacer = QLabel(self.gb_p2)
+
+        self.horizontalLayout_6.addWidget(self.l_spacer)
+
+        self.pb_tips = QPushButton(self.gb_p2)
+        self.pb_tips.setObjectName(u"Tips")
+        self.pb_tips.setFixedWidth(40)
+        self.pb_tips.setFixedHeight(20)
+
+        self.horizontalLayout_6.addWidget(self.pb_tips)
+
         self.pb_fetch = QPushButton(self.gb_p2)
         self.pb_fetch.setObjectName(u"pb_fetch")
 
@@ -160,8 +232,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_5 = QVBoxLayout(self.gb_p3)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.tv_information = QTableWidget(self.gb_p3)
-        if (self.tv_information.columnCount() < 7):
-            self.tv_information.setColumnCount(7)
+        if (self.tv_information.columnCount() < 9):
+            self.tv_information.setColumnCount(9)
         __qtablewidgetitem = QTableWidgetItem()
         self.tv_information.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -175,8 +247,12 @@ class Ui_MainWindow(object):
         __qtablewidgetitem5 = QTableWidgetItem()
         self.tv_information.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        __qtablewidgetitem6.setTextAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.tv_information.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.tv_information.setHorizontalHeaderItem(7, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        __qtablewidgetitem8.setTextAlignment(Qt.AlignJustify | Qt.AlignVCenter)
+        self.tv_information.setHorizontalHeaderItem(8, __qtablewidgetitem8)
         self.tv_information.setObjectName(u"tv_information")
         self.tv_information.setAlternatingRowColors(True)
         self.tv_information.setSelectionMode(QAbstractItemView.SingleSelection)
@@ -226,12 +302,33 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
+
+        self.l_threads = QLabel(self.gb_p4)
+        self.l_threads.setObjectName(u"l_threads")
+
+        self.horizontalLayout.addWidget(self.l_threads)
+
+        self.le_threads = QLineEdit(self.gb_p4)
+        self.le_threads.setObjectName(u"le_threads")
+
+        self.le_threads.setGeometry(125, 18, 40, 20)
+
+        self.l_max_threads = QLabel(self.gb_p4)
+        self.l_max_threads.setObjectName(u"l_max_threads")
+
+        self.l_max_threads.setGeometry(180, 18, 400, 20)
+
+        self.max_threads_value = QLabel(self.gb_p4)
+        self.max_threads_value.setObjectName(u"max_threads_value")
+
+        self.max_threads_value.setGeometry(380, 18, 10, 20)
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout)
+
         self.cb_reupload = QCheckBox(self.gb_p4)
         self.cb_reupload.setObjectName(u"cb_reupload")
 
-        self.horizontalLayout.addWidget(self.cb_reupload)
-
-        self.verticalLayout_4.addLayout(self.horizontalLayout)
+        self.verticalLayout_4.addWidget(self.cb_reupload)
 
         self.pb_publish = QPushButton(self.gb_p4)
         self.pb_publish.setObjectName(u"pb_publish")
@@ -244,10 +341,21 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addWidget(self.progressBar)
 
+        self.horizontal_layout_info = QHBoxLayout()
+
         self.l_info = QLabel(self.gb_p4)
         self.l_info.setObjectName(u"l_info")
 
-        self.verticalLayout_4.addWidget(self.l_info)
+        self.horizontal_layout_info.addWidget(self.l_info)
+
+        self.pb_logs = QPushButton(self.gb_p4)
+        self.pb_logs.setObjectName(u"Logs")
+        self.pb_logs.setFixedWidth(40)
+        self.pb_logs.setFixedHeight(20)
+
+        self.horizontal_layout_info.addWidget(self.pb_logs)
+
+        self.verticalLayout_4.addLayout(self.horizontal_layout_info)
 
         self.verticalLayout.addWidget(self.gb_p4)
 
@@ -331,6 +439,8 @@ class Ui_MainWindow(object):
             "MainWindow", u"Log in", None))
         self.l_project.setText(QCoreApplication.translate(
             "MainWindow", u"Project:", None))
+        self.pb_refresh.setText(QCoreApplication.translate(
+            "MainWindow", u"Refresh", None))
         self.gb_p2.setTitle(QCoreApplication.translate(
             "MainWindow", u"2. Where to fetch information from", None))
         self.rb_doXML.setText(QCoreApplication.translate(
@@ -341,6 +451,24 @@ class Ui_MainWindow(object):
             "MainWindow", u"Subfolders", None))
         self.pb_pick.setText(QCoreApplication.translate(
             "MainWindow", u"Pick", None))
+        self.l_define_rule.setText(QCoreApplication.translate(
+            "MainWindow", u"Define rule:", None))
+        self.cb_use_folder.setText(QCoreApplication.translate(
+            "MainWindow", u"useFolder", None))
+        self.l_delimiter.setText(QCoreApplication.translate(
+            "MainWindow", u"Delimiter:", None))
+        self.l_ep.setText(QCoreApplication.translate(
+            "MainWindow", u"Ep:", None))
+        self.l_sq.setText(QCoreApplication.translate(
+            "MainWindow", u"Sq:", None))
+        self.l_sh.setText(QCoreApplication.translate(
+            "MainWindow", u"Shot:", None))
+        self.l_ta.setText(QCoreApplication.translate(
+            "MainWindow", u"Task:", None))
+        self.l_spacer.setText(QCoreApplication.translate(
+            "MainWindow", u"  ", None))
+        self.pb_tips.setText(QCoreApplication.translate(
+            "MainWindow", u"Tips", None))
         self.pb_fetch.setText(QCoreApplication.translate(
             "MainWindow", u"Fetch!", None))
         self.gb_p3.setTitle(QCoreApplication.translate(
@@ -353,31 +481,43 @@ class Ui_MainWindow(object):
             "MainWindow", u"Shot Exists", None))
         ___qtablewidgetitem2 = self.tv_information.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(
-            QCoreApplication.translate("MainWindow", u"Sequence", None))
+            QCoreApplication.translate("MainWindow", u"Episode", None))
         ___qtablewidgetitem3 = self.tv_information.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(
-            QCoreApplication.translate("MainWindow", u"Shot", None))
+            QCoreApplication.translate("MainWindow", u"Sequence", None))
         ___qtablewidgetitem4 = self.tv_information.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(
-            QCoreApplication.translate("MainWindow", u"Framerange", None))
+            QCoreApplication.translate("MainWindow", u"Shot", None))
         ___qtablewidgetitem5 = self.tv_information.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate(
-            "MainWindow", u"Preview Path", None))
+        ___qtablewidgetitem5.setText(
+            QCoreApplication.translate("MainWindow", u"Task", None))
         ___qtablewidgetitem6 = self.tv_information.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(
+            QCoreApplication.translate("MainWindow", u"Framerange", None))
+        ___qtablewidgetitem7 = self.tv_information.horizontalHeaderItem(7)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate(
+            "MainWindow", u"Preview Path", None))
+        ___qtablewidgetitem8 = self.tv_information.horizontalHeaderItem(8)
+        ___qtablewidgetitem8.setText(
             QCoreApplication.translate("MainWindow", u"Filesize", None))
         self.l_task.setText(QCoreApplication.translate(
-            "MainWindow", u"Post previews under:", None))
+            "MainWindow", u"Post previews with a null task name under:", None))
         self.l_status.setText(QCoreApplication.translate(
             "MainWindow", u"With status:", None))
         self.gb_p4.setTitle(QCoreApplication.translate(
             "MainWindow", u"4. Publish", None))
+        self.l_threads.setText(QCoreApplication.translate(
+            "MainWindow", u"Number of Threads:", None))
+        self.l_max_threads.setText(QCoreApplication.translate(
+            "MainWindow", u"# Max input value | <span style='font-size: 8.8pt;'>最大允许输入</ span>", None))
         self.cb_reupload.setText(QCoreApplication.translate(
             "MainWindow", u"Upload previews to shots that already exists", None))
         self.pb_publish.setText(QCoreApplication.translate(
             "MainWindow", u"Publish", None))
         self.l_info.setText(QCoreApplication.translate(
             "MainWindow", u"Information bar", None))
+        self.pb_logs.setText(QCoreApplication.translate(
+            "MainWindow", u"Logs", None))
         self.l_createdby.setText(QCoreApplication.translate(
             "MainWindow", u"Created by Jacob Danell, Ember Light", None))
         self.l_appinfo.setText(QCoreApplication.translate(
